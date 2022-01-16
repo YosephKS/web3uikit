@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import fonts from '../../styles/fonts';
 import color from '../../styles/colors';
 
-const AvatarStyled = styled.div`
+const AvatarStyled = styled.div.attrs((props) => ({
+    rounded: props.rounded,
+}))`
     background: radial-gradient(
         106.45% 108.64% at 32.33% -4.84%,
         #ecf5fc 0.52%,
@@ -14,6 +16,7 @@ const AvatarStyled = styled.div`
     text-transform: uppercase;
     width: 40px;
     word-break: break-all;
+    border-radius: ${(props) => (props.rounded ? '20px' : '1px')}; ;
 `;
 
 const DivTextStyled = styled.div`

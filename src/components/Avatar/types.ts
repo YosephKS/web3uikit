@@ -17,4 +17,9 @@ export interface AvatarProps {
      * The image to use
      */
     image?: string;
+
+    /**
+     * Is Avatar Rounded
+     */
+    rounded?: boolean;
 }
